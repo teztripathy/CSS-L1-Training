@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scenario-3</title>
+</head>
+<body>
+    <h2>The list of Employee IDs</h2>
+    <ul>
+        <li class = "list">244581</li>
+        <li class = "list">786294</li>
+        <li class = "list">984013</li>
+        <li class = "list">879400</li>
+        <li class = "list">327345</li>
+        <li class = "list">873210</li>
+        <li class = "list">347913</li>
+        <li class = "list">153248</li>
+        <li class = "list">325147</li>
+        <li class = "list">321469</li>
+    </ul>
+<p class = "here"></p>
+<script>
+function theLuckyOne() {
+    var listCount = document.querySelectorAll(".list");
+    var i;
+    for (i = 0; i < listCount.length; i++) {
+        var text1 = document.querySelectorAll(".list")[i].textContent;
+        if (text1.toString().lastIndexOf("5") >= 0) {
+            listCount[i].style.color = "red";
+        }
+    }
+}
+document.getElementById("here").innerHTML = theLuckyOne();
+</script>
+</body>
+</html>
